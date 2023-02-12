@@ -44,6 +44,13 @@
                     </div>
                 </div>
                 <div class="row mb-3">
+                    <div class="col-12">
+                        <label for="keterangan" class="form-label">Keterangan</label>
+                        <input type="text" class="form-control" id="keterangan" name="keterangan" required
+                            value="{{ $arsip->keterangan }}">
+                    </div>
+                </div>
+                <div class="row mb-3">
                     <div class="col-6">
                         <label for="lokasi_depot" class="form-label">Lokasi Depot *</label>
                         <input type="number" class="form-control" id="lokasi_depot" name="lokasi_depot"

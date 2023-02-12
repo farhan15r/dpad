@@ -80,6 +80,11 @@
                 {{ session('success') }}
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
+        @elseif (session('error'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ session('error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
         @endif
 
         <table class="table table-sm table-striped">
@@ -92,6 +97,7 @@
                     <th scope="col" rowspan="2" class="align-middle">Kurun Waktu Tahun</th>
                     <th scope="col" rowspan="2" class="align-middle">Tingkat Perkembangan</th>
                     <th scope="col" rowspan="2" class="align-middle">Jumlah</th>
+                    <th scope="col" rowspan="2" class="align-middle">Keterangan</th>
                     <th scope="col" colspan="2" class="align-middle">Lokasi Simpan</th>
                     <th scope="col" colspan="2" class="align-middle">Nomor Definitif</th>
                     <th scope="col" rowspan="2" class="align-middle">Jangka Simpan dan Nasib Akhir</th>
@@ -118,6 +124,7 @@
                         <td class="text-center">{{ $data->tahun }}</td>
                         <td class="text-center">{{ $data->tingkat_perkembangan }}</td>
                         <td class="text-center">{{ $data->jumlah }}</td>
+                        <td>{{ $data->keterangan }}</td>
                         <td class="text-center">{{ $data->lokasi_depot }}</td>
                         <td class="text-center">{{ $data->lokasi_rak }}</td>
                         <td class="text-center">{{ $data->no_box }}</td>

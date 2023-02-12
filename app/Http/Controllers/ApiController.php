@@ -42,4 +42,9 @@ class ApiController extends Controller
 
         return view('api.getArsip', $data);
     }
+
+    public function getAddArsipExcel()
+    {
+        return view('api.addArsipExcel');
+    }
 }
