@@ -40,6 +40,12 @@
                     </div>
                 </div>
                 <div class="row mb-3">
+                    <div class="col-12">
+                        <label for="keterangan" class="form-label">Keterangan</label>
+                        <input type="text" class="form-control" id="keterangan" name="keterangan" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
                     <div class="col-6">
                         <label for="lokasi_depot" class="form-label">Lokasi Depot *</label>
                         <input type="number" class="form-control" id="lokasi_depot" name="lokasi_depot" required>
@@ -75,6 +81,8 @@
             </form>
         </div>
         <div class="modal-footer">
+            <button type="button" class="btn btn-success me-auto" id="add-excel">Upload Excel</button>
+
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
             <button type="submit" class="btn btn-primary" id="submit-tambah">Tambah</button>
         </div>
@@ -84,5 +92,13 @@
 <script>
     $('#submit-tambah').click(function() {
         $('#submit-form').trigger('click')
+    });
+
+    $('#add-excel').click(function(e) {
+        $.get("/api/addarsipexcel", {},
+            function(data) {
+                $('#modal-data').html(data);
+            },
+        );
     });
 </script>

@@ -29,9 +29,11 @@ Route::post('/login', [AuthController::class, 'postLogin'])->name('login');
 Route::get('/logout', [AuthController::class, 'getLogout']);
 
 Route::post('/arsip', [ArsipController::class, 'postAddArsip'])->middleware('auth');
+Route::post('/arsipexcel', [ArsipController::class, 'postAddArsipExcel'])->middleware('auth');
 Route::put('/arsip/{id}', [ArsipController::class, 'putArsip'])->middleware('auth');
 Route::delete('/arsip/{id}', [ArsipController::class, 'deleteArsip'])->middleware('auth');
 
 Route::get('/api/autocomplete', [ApiController::class, 'autocomplete']);
 Route::get('/api/addarsip', [ApiController::class, 'getAddArsip'])->middleware('auth');
 Route::get('/api/getarsip/{id}', [ApiController::class, 'getArsip'])->middleware('auth');
+Route::get('/api/addarsipexcel', [ApiController::class, 'getAddArsipExcel'])->middleware('auth');
