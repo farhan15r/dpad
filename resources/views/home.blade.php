@@ -26,7 +26,7 @@
     <nav class="navbar bg-body-tertiary shadow fixed-top">
         <div class="container">
             <a href="/" class="navbar-brand">
-                <span class="navbar-brand mb-0 h1">Navbar</span>
+                <span class="navbar-brand mb-0 h1">DPAD</span>
             </a>
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -54,6 +54,15 @@
                     <div class="input-group">
                         <input type="text" id="search_input" class="form-control"
                             value="{{ app('request')->input('search') }}">
+                        <select name="year" id="year_filter" class="form-select" style="max-width: 25%;">
+                            <option value="">Pilih Tahun</option>
+                            @foreach ($years as $year)
+                                <option value="{{ $year->tahun }}"
+                                    {{ app('request')->input('year') == $year->tahun ? 'selected' : '' }}>
+                                    {{ $year->tahun }}
+                                </option>
+                            @endforeach
+                        </select>
                         <button class="btn btn-primary" type="submit" id="search_submit">
                             <i class="bi bi-search"></i>
                         </button>
@@ -69,6 +78,7 @@
                 </div>
             @endauth
         </div>
+
 
         <!-- Modal -->
         <div class="modal fade" id="modal-data" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
@@ -171,7 +181,8 @@
         $('#search_submit').click(function(e) {
             e.preventDefault();
             let search = $('#search_input').val();
-            window.location.href = '/?search=' + search;
+            let year = $('#year_filter').val();
+            window.location.href = `/?search=${search}&year=${year}`;
         });
 
         $('#modal-button').click(function() {
