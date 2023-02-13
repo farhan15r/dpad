@@ -5,11 +5,33 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+            {{-- nb --}}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Perhatian!</strong> Pastikan file yang diupload sesuai dengan format yang telah ditentukan.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {{-- contoh format, klik untuk download --}}
+            <strong>Contoh Format</strong> <a href="/assets/template.xlsx" class="alert-link">
+                Klik untuk download.</a>
+
+            {{-- penjelasan --}}
+            <strong>Dengan ketentuan:</strong>
+            <ul>
+                <li>Terdiri dari 14 kolom (A - N)</li>
+                <li>Baris 1 dan 2 untuk nama kolom</li>
+                <li>Baris ketiga dan seterunya adalah data</li>
+                <li>Kode Klasifikasi wajib diisi dan berupa angka</li>
+                <li>Jenis Arsip wajib diisi</li>
+                <li>Deskripsi Arsip wajib diisi</li>
+                <li>Kurun Waktu (Tahun) wajib diisi dan berupa angka</li>
+            </ul>
+
+
             <form action="arsipexcel" method="post" id="form-tambah" enctype="multipart/form-data">
                 @csrf
                 <div class="row mb-3">
                     <div class="col-12">
-                        <label for="file" class="form-label">Masukkan File *</label>
+                        <label for="file" class="form-label">Masukkan File<span class="text-danger">*</span></label>
                         <input type="file" class="form-control" id="file" name="file" required>
                     </div>
                 </div>
