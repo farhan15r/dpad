@@ -12,20 +12,22 @@ class HomeController extends Controller
         $searchQuery = request()->query('search');
         $yearFilter = request()->query('year');
 
-        if ($searchQuery) {
-            $arsip = Arsip::where('deskripsi', 'LIKE', "%{$searchQuery}%")
-                ->Where('tahun', $yearFilter)
+        if ($searchQuery && $yearFilter) {
+            $arsip = Arsip::where('tahun', $yearFilter)
+                ->where('deskripsi', 'LIKE', "%$searchQuery%")
                 ->orderBy('tahun', 'DESC')
                 ->paginate(25);
-        } else if ($yearFilter) {
+        } elseif ($searchQuery) {
+            $arsip = Arsip::where('deskripsi', 'LIKE', "%$searchQuery%")
+                ->orderBy('tahun', 'DESC')
+                ->paginate(25);
+        } elseif ($yearFilter) {
             $arsip = Arsip::where('tahun', $yearFilter)
                 ->orderBy('tahun', 'DESC')
                 ->paginate(25);
         } else {
-            $arsip = Arsip::orderBy('tahun', 'DESC')
-                ->paginate(25);
+            $arsip = Arsip::orderBy('tahun', 'DESC')->paginate(25);
         }
-
 
         /*
         ** Mengubah string 'NO. ' menjadi '<br>NO. ' agar NO. ARSIP dapat dipisahkan
