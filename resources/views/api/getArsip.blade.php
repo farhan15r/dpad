@@ -10,68 +10,70 @@
                 @method('PUT')
                 <div class="row mb-3">
                     <div class="col-6">
-                        <label for="kode_klasifikasi" class="form-label">Kode Klasifikasi *</label>
+                        <label for="kode_klasifikasi" class="form-label">Kode Klasifikasi<span
+                                class="text-danger">*</span></label>
                         <input type="number" class="form-control" id="kode_klasifikasi" name="kode_klasifikasi"
-                            value="{{ $arsip->kode_klasifikasi }}" required>
+                            value="{{ $arsip->kode_klasifikasi }}" disabled>
                     </div>
                     <div class="col-6">
-                        <label for="jenis_arsip" class="form-label">Jenis Arsip *</label>
+                        <label for="jenis_arsip" class="form-label">Jenis Arsip<span
+                                class="text-danger">*</span></label>
                         <input type="text" class="form-control" id="jenis_arsip" name="jenis_arsip"
-                            value="{{ $arsip->jenis_arsip }}" required>
+                            value="{{ $arsip->jenis_arsip }}" disabled>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-12">
-                        <label for="deskripsi" class="form-label">Deskripsi *</label>
+                        <label for="deskripsi" class="form-label">Deskripsi<span class="text-danger">*</span></label>
                         <textarea name="deskripsi" class="form-control" id="deskripsi" rows="3" disabled>{{ $arsip->deskripsi }}</textarea>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label for="tahun" class="form-label">Tahun *</label>
+                        <label for="tahun" class="form-label">Tahun<span class="text-danger">*</span></label>
                         <input type="number" class="form-control" id="tahun" name="tahun"
-                            value="{{ $arsip->tahun }}" required>
+                            value="{{ $arsip->tahun }}" disabled>
                     </div>
                     <div class="col-6">
-                        <label for="tingkat_perkembangan" class="form-label">Tingkat Perkembangan *</label>
+                        <label for="tingkat_perkembangan" class="form-label">Tingkat Perkembangan</label>
                         <input type="text" class="form-control" id="tingkat_perkembangan" name="tingkat_perkembangan"
-                            value="{{ $arsip->tingkat_perkembangan }}" required>
+                            value="{{ $arsip->tingkat_perkembangan }}">
                     </div>
                     <div class="col-3">
-                        <label for="jumlah" class="form-label">Jumlah *</label>
+                        <label for="jumlah" class="form-label">Jumlah</label>
                         <input type="number" class="form-control" id="jumlah" name="jumlah"
-                            value="{{ $arsip->jumlah }}" required>
+                            value="{{ $arsip->jumlah }}">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-12">
                         <label for="keterangan" class="form-label">Keterangan</label>
-                        <input type="text" class="form-control" id="keterangan" name="keterangan" required
+                        <input type="text" class="form-control" id="keterangan" name="keterangan"
                             value="{{ $arsip->keterangan }}">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-6">
-                        <label for="lokasi_depot" class="form-label">Lokasi Depot *</label>
+                        <label for="lokasi_depot" class="form-label">Lokasi Depot</label>
                         <input type="number" class="form-control" id="lokasi_depot" name="lokasi_depot"
-                            value="{{ $arsip->lokasi_depot }}" required>
+                            value="{{ $arsip->lokasi_depot }}">
                     </div>
                     <div class="col-6">
-                        <label for="lokasi_rak" class="form-label">Lokasi Rak *</label>
+                        <label for="lokasi_rak" class="form-label">Lokasi Rak</label>
                         <input type="number" class="form-control" id="lokasi_rak" name="lokasi_rak"
-                            value="{{ $arsip->lokasi_rak }}" required>
+                            value="{{ $arsip->lokasi_rak }}">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-6">
-                        <label for="nomor_box" class="form-label">Nomor Box *</label>
+                        <label for="nomor_box" class="form-label">Nomor Box</label>
                         <input type="number" class="form-control" id="nomor_box" name="nomor_box"
-                            value="{{ $arsip->no_box }}" required>
+                            value="{{ $arsip->no_box }}">
                     </div>
                     <div class="col-6">
-                        <label for="nomor_folder" class="form-label">Nomor Folder *</label>
+                        <label for="nomor_folder" class="form-label">Nomor Folder</label>
                         <input type="number" class="form-control" id="nomor_folder" name="nomor_folder"
-                            value="{{ $arsip->no_folder }}" required>
+                            value="{{ $arsip->no_folder }}">
                     </div>
                 </div>
                 <div class="row mb-3">

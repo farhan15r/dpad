@@ -44,7 +44,7 @@ class ArsipController extends Controller
                 $arsip->deskripsi == $deskripsi &&
                 $arsip->kode_klasifikasi == $request->get('kode_klasifikasi') &&
                 $arsip->jenis_arsip == $request->get('jenis_arsip') &&
-                $arsip->tahun = $request->get('tahun') &&
+                $arsip->tahun == $request->get('tahun') &&
                 $arsip->lokasi_depot == $request->get('lokasi_depot') &&
                 $arsip->lokasi_rak == $request->get('lokasi_rak') &&
                 $arsip->no_box == $request->get('nomor_box') &&
@@ -76,10 +76,10 @@ class ArsipController extends Controller
     {
         $arsip = Arsip::find($id);
 
-        $arsip->kode_klasifikasi = $request->get('kode_klasifikasi');
-        $arsip->jenis_arsip = $request->get('jenis_arsip');
+        $arsip->kode_klasifikasi = $arsip->kode_klasifikasi; // disamakan dengan kode klasifikasi yang ada di database
+        $arsip->jenis_arsip = $arsip->jenis_arsip; // disamakan dengan jenis arsip yang ada di database
         $arsip->deskripsi = $arsip->deskripsi; // disamakan dengan deskripsi yang ada di database
-        $arsip->tahun = $request->get('tahun');
+        $arsip->tahun = $arsip->tahun; // disamakan dengan tahun yang ada di database
         $arsip->tingkat_perkembangan = $request->get('tingkat_perkembangan');
         $arsip->jumlah = $request->get('jumlah');
         $arsip->lokasi_depot = $request->get('lokasi_depot');

@@ -14,8 +14,7 @@ class HomeController extends Controller
 
         if ($searchQuery) {
             $arsip = Arsip::where('deskripsi', 'LIKE', "%{$searchQuery}%")
-                ->orWhere('nomor', 'LIKE', "%{$searchQuery}%")
-                ->orWhere('tahun', 'LIKE', "%{$searchQuery}%")
+                ->Where('tahun', $yearFilter)
                 ->orderBy('tahun', 'DESC')
                 ->paginate(25);
         } else if ($yearFilter) {

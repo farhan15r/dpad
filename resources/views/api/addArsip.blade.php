@@ -9,60 +9,62 @@
                 @csrf
                 <div class="row mb-3">
                     <div class="col-6">
-                        <label for="kode_klasifikasi" class="form-label">Kode Klasifikasi *</label>
+                        <label for="kode_klasifikasi" class="form-label">Kode Klasifikasi<span
+                                class="text-danger">*</span></label>
                         <input type="number" class="form-control" id="kode_klasifikasi" name="kode_klasifikasi"
                             required>
                     </div>
                     <div class="col-6">
-                        <label for="jenis_arsip" class="form-label">Jenis Arsip *</label>
+                        <label for="jenis_arsip" class="form-label">Jenis Arsip<span
+                                class="text-danger">*</span></label>
                         <input type="text" class="form-control" id="jenis_arsip" name="jenis_arsip" required>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-12">
-                        <label for="deskripsi" class="form-label">Deskripsi *</label>
+                        <label for="deskripsi" class="form-label">Deskripsi<span class="text-danger">*</span></label>
                         <textarea name="deskripsi" class="form-control" id="deskripsi" rows="3" required></textarea>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label for="tahun" class="form-label">Tahun *</label>
+                        <label for="tahun" class="form-label">Tahun<span class="text-danger">*</span></label>
                         <input type="number" class="form-control" id="tahun" name="tahun" required>
                     </div>
                     <div class="col-6">
-                        <label for="tingkat_perkembangan" class="form-label">Tingkat Perkembangan *</label>
-                        <input type="text" class="form-control" id="tingkat_perkembangan" name="tingkat_perkembangan"
-                            required>
+                        <label for="tingkat_perkembangan" class="form-label">Tingkat Perkembangan</label>
+                        <input type="text" class="form-control" id="tingkat_perkembangan"
+                            name="tingkat_perkembangan">
                     </div>
                     <div class="col-3">
-                        <label for="jumlah" class="form-label">Jumlah *</label>
-                        <input type="number" class="form-control" id="jumlah" name="jumlah" required>
+                        <label for="jumlah" class="form-label">Jumlah</label>
+                        <input type="number" class="form-control" id="jumlah" name="jumlah">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-12">
                         <label for="keterangan" class="form-label">Keterangan</label>
-                        <input type="text" class="form-control" id="keterangan" name="keterangan" required>
+                        <input type="text" class="form-control" id="keterangan" name="keterangan">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-6">
-                        <label for="lokasi_depot" class="form-label">Lokasi Depot *</label>
-                        <input type="number" class="form-control" id="lokasi_depot" name="lokasi_depot" required>
+                        <label for="lokasi_depot" class="form-label">Lokasi Depot</label>
+                        <input type="number" class="form-control" id="lokasi_depot" name="lokasi_depot">
                     </div>
                     <div class="col-6">
-                        <label for="lokasi_rak" class="form-label">Lokasi Rak *</label>
-                        <input type="number" class="form-control" id="lokasi_rak" name="lokasi_rak" required>
+                        <label for="lokasi_rak" class="form-label">Lokasi Rak</label>
+                        <input type="number" class="form-control" id="lokasi_rak" name="lokasi_rak">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-6">
-                        <label for="nomor_box" class="form-label">Nomor Box *</label>
-                        <input type="number" class="form-control" id="nomor_box" name="nomor_box" required>
+                        <label for="nomor_box" class="form-label">Nomor Box</label>
+                        <input type="number" class="form-control" id="nomor_box" name="nomor_box">
                     </div>
                     <div class="col-6">
-                        <label for="nomor_folder" class="form-label">Nomor Folder *</label>
-                        <input type="number" class="form-control" id="nomor_folder" name="nomor_folder" required>
+                        <label for="nomor_folder" class="form-label">Nomor Folder</label>
+                        <input type="number" class="form-control" id="nomor_folder" name="nomor_folder">
                     </div>
                 </div>
                 <div class="row mb-3">

@@ -53,7 +53,7 @@
                 <form>
                     <div class="input-group">
                         <input type="text" id="search_input" class="form-control"
-                            value="{{ app('request')->input('search') }}">
+                            value="{{ app('request')->input('search') }}" placeholder="Cari...">
                         <select name="year" id="year_filter" class="form-select" style="max-width: 25%;">
                             <option value="">Pilih Tahun</option>
                             @foreach ($years as $year)
