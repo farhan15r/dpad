@@ -3,6 +3,7 @@
 use App\Http\Controllers\ApiController;
 use App\Http\Controllers\ArsipController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,3 +38,5 @@ Route::get('/api/autocomplete', [ApiController::class, 'autocomplete']);
 Route::get('/api/addarsip', [ApiController::class, 'getAddArsip'])->middleware('auth');
 Route::get('/api/getarsip/{id}', [ApiController::class, 'getArsip'])->middleware('auth');
 Route::get('/api/addarsipexcel', [ApiController::class, 'getAddArsipExcel'])->middleware('auth');
+
+Route::get('/download/templateexcel', [DownloadController::class, 'templateExcel']);

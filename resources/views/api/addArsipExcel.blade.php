@@ -11,7 +11,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             {{-- contoh format, klik untuk download --}}
-            <strong>Contoh Format</strong> <a href="/assets/template.xlsx" class="alert-link">
+            <strong>Contoh Format</strong> <a href="/download/templateexcel" class="alert-link">
                 Klik untuk download.</a>
 
             {{-- penjelasan --}}
